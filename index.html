@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>모아받기 개인정보처리방침</title>
+<style>
+  :root { --bg:#F6F3EF; --card:#FFFFFF; --line:#EAE4DD; --text:#1D1B19; --sub:#6E6862; --accent:#E0593D; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1A1817; --card:#232120; --line:#3A3633; --text:#F1ECE6; --sub:#A9A29A; --accent:#F2846C; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 20px 80px; background:var(--bg); color:var(--text);
+    font:16px/1.75 -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; word-break:keep-all; }
+  main { max-width:760px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 4px; }
+  .meta { color:var(--sub); font-size:14px; margin-bottom:32px; }
+  h2 { font-size:19px; margin:40px 0 12px; padding-top:20px; border-top:1px solid var(--line); }
+  ul { padding-left:22px; } li { margin:6px 0; }
+  a { color:var(--accent); }
+  .box { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:16px 0; }
+  .box strong { color:var(--accent); }
+  table { border-collapse:collapse; width:100%; margin:16px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--card); font-weight:600; }
+  .wrap { overflow-x:auto; }
+  footer { margin-top:56px; color:var(--sub); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+<h1>모아받기 개인정보처리방침</h1>
+<p class="meta">개발자: Zenith.Studio · 시행일: 2026년 11월 19일 · <a href="#en">English</a></p>
+
+<div class="box">모아받기는 보호자가 키즈노트에 올라온 내 아이의 앨범·알림장 사진을 자기 폰에 받아 두는 앱입니다. <strong>개발자는 서버를 두지 않으며, 이용자의 개인정보를 받거나 보관하지 않습니다.</strong> 모든 처리는 이용자의 폰 안에서 이루어집니다.<br>모아받기는 키즈노트(주식회사 키즈노트)와 관련 없는 개인 개발 앱입니다.</div>
+
+<h2>1. 개발자가 수집하는 정보</h2>
+<p>없습니다. 이름, 전화번호, 이메일, 아이디·비밀번호, 사진, 위치, 광고 ID를 수집하지 않습니다. 광고와 이용 통계 도구도 넣지 않았습니다.</p>
+
+<h2>2. 키즈노트 로그인</h2>
+<ul>
+  <li>로그인은 앱 안에 띄운 <strong>키즈노트 웹 화면</strong>에서 이용자가 직접 합니다. 아이디와 비밀번호는 키즈노트로만 전송되며, 앱과 개발자는 이를 저장하거나 전송하지 않습니다.</li>
+  <li>로그인 상태(쿠키)는 폰 안 앱 저장소에만 남습니다. 앱을 지우면 함께 지워집니다.</li>
+</ul>
+
+<h2>3. 폰 안에서만 처리하는 정보</h2>
+<div class="wrap"><table>
+  <tr><th>정보</th><th>어디서 오나</th><th>어디에 남나</th></tr>
+  <tr><td>아이 이름, 프로필 사진, 기간별 사진 수</td><td>키즈노트</td><td>화면 표시에만 사용, 저장하지 않음</td></tr>
+  <tr><td>앨범·알림장 사진과 동영상</td><td>키즈노트 이미지 서버</td><td>이용자 폰의 사진 폴더 <code>DCIM/키즈노트</code></td></tr>
+  <tr><td>알림장 글, 작성 선생님 이름</td><td>키즈노트</td><td>이용자 폰의 문서 폴더 <code>Documents/키즈노트</code></td></tr>
+  <tr><td>받은 사진 목록(사진 번호)</td><td>앱</td><td>앱 저장소. 이어받기에만 사용</td></tr>
+</table></div>
+<p>위 정보는 개발자에게 전송되지 않습니다. 앱은 키즈노트 서버와 키즈노트 사진이 저장된 카카오 이미지 서버에만 직접 연결합니다.</p>
+
+<h2>4. 얼굴 찾기 (선택 기능)</h2>
+<ul>
+  <li>"아이 나온 사진만" 기능은 이용자가 동의하고 켰을 때만 동작합니다.</li>
+  <li>사진 속 얼굴에서 특징값을 계산해 이용자가 고른 아이 얼굴과 비교합니다. 이 계산은 <strong>폰 안에서만</strong> 이루어지고, 특징값과 사진은 폰 밖으로 나가지 않습니다.</li>
+  <li>특징값은 파일로 저장하지 않으며 앱을 닫으면 사라집니다.</li>
+  <li>단체 사진 속 다른 아이의 얼굴도 비교 과정에서 잠깐 처리되지만, 저장하거나 따로 쓰지 않습니다.</li>
+  <li>얼굴 인식 모델: OpenCV YuNet(MIT), SFace(Apache 2.0). 외부 서비스에 보내지 않습니다.</li>
+</ul>
+
+<h2>5. 결제</h2>
+<p>이용권 결제는 Google Play가 처리합니다. 개발자는 카드 번호 등 결제 정보를 받지 않으며, 이용 기간 확인을 위한 구매 확인 값만 폰에 남깁니다.</p>
+
+<h2>6. 앱이 쓰는 권한</h2>
+<ul>
+  <li>인터넷: 키즈노트에서 사진 목록과 사진을 받기 위해</li>
+  <li>알림·포그라운드 서비스·화면 켜짐 유지: 다른 앱을 써도 받기가 계속되고 진행률을 알림으로 보여 주기 위해</li>
+  <li>사진 저장은 별도 저장소 권한 없이, 앱이 만든 파일만 사진 폴더에 넣습니다. 폰의 다른 사진은 읽지 않습니다.</li>
+</ul>
+
+<h2>7. 아동의 정보</h2>
+<p>모아받기는 보호자가 쓰는 앱입니다. 아이의 사진과 정보는 보호자의 폰에만 저장되며, 개발자에게 전달되지 않습니다.</p>
+
+<h2>8. 정보 삭제</h2>
+<ul>
+  <li>앱을 지우면 로그인 상태와 받은 사진 목록이 지워집니다.</li>
+  <li>받은 사진과 알림장 글은 이용자 폰의 파일이므로 갤러리·내 파일 앱에서 직접 지울 수 있습니다.</li>
+  <li>개발자가 보관하는 정보가 없으므로 따로 삭제를 요청할 정보는 없습니다. 궁금한 점은 아래로 문의해 주세요.</li>
+</ul>
+
+<h2>9. 문의</h2>
+<p>Zenith.Studio · <a href="mailto:wnsgud875@gmail.com?subject=%EB%AA%A8%EC%95%84%EB%B0%9B%EA%B8%B0%20%EB%AC%B8%EC%9D%98">wnsgud875@gmail.com</a></p>
+<p>이 방침이 바뀌면 이 페이지에 새 시행일을 게시합니다.</p>
+
+<h2 id="en">Privacy Policy (English)</h2>
+<p>Moabatgi ("the app") lets a parent save their own child's KidsNote album and notice photos to their phone. The app is not affiliated with KidsNote Inc.</p>
+<ul>
+  <li><strong>We collect nothing.</strong> There is no developer server, no ads and no analytics.</li>
+  <li>You sign in on KidsNote's own web page inside the app. Your ID and password go only to KidsNote; the app does not store or send them. The sign-in cookie stays on your phone and is removed when you uninstall.</li>
+  <li>Photos, videos and notice text are downloaded directly from KidsNote and its image server and saved only on your phone (<code>DCIM/키즈노트</code>, <code>Documents/키즈노트</code>).</li>
+  <li>Optional face matching runs entirely on your phone after you consent. Face features are kept in memory only, never saved to a file and never sent anywhere. Models: OpenCV YuNet (MIT), SFace (Apache 2.0).</li>
+  <li>Payments are handled by Google Play. We receive no card details.</li>
+  <li>Contact: <a href="mailto:wnsgud875@gmail.com">wnsgud875@gmail.com</a></li>
+</ul>
+
+<footer>© Zenith.Studio</footer>
+</main>
+</body>
+</html>
